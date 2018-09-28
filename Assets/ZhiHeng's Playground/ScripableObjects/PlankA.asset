@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c001172fef1424689e9f7f4aa19fbb, type: 3}
+  m_Name: PlankA
+  m_EditorClassIdentifier: 
+  type: PlankA
+  connectionPoints:
+  - A
+  - B
+  connectableBlocks:
+  - connectableBlock: {fileID: 11400000, guid: 765e0a272ad14ab4287afc0a767b5df0, type: 2}
+    connectablePoints:
+    - currBlkConnPt: A
+      targetBlkConnPt: B
+    - currBlkConnPt: A
+      targetBlkConnPt: C
