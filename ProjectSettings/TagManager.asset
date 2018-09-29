@@ -9,6 +9,13 @@ TagManager:
   - ExcludeTeleport
   - TeleportIgnore
   - Teleportable
+  - Leg
+  - SnapCube
+  - Arm
+  - SnapCylinder
+  - Saucers
+  - Torso
+  - Head
   layers:
   - Default
   - TransparentFX
