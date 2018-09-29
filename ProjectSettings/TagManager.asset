@@ -26,6 +26,8 @@ TagManager:
   - 
   - 
   - PostProcessing
+  - Connection
+  - PhysicalParts
   - FloatingText
   - 
   - 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScrewBehaviour : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField]    
     private Animator m_Animator;
     // Start is called before the first frame update
     void Start()
