@@ -109,19 +109,21 @@ public class SoundManager : MonoBehaviour
 
     private IEnumerator FadeOutAndIn(AudioClip newBGM)
     {
-        while (bgmAudioS.volume > 0)
+        /*while (bgmAudioS.volume > 0)
         {
             bgmAudioS.volume -= Time.deltaTime / 0.5f;
             yield return null;
-        }
+        }*/
 
         bgmAudioS.clip = newBGM;
         bgmAudioS.Play();
 
-        while (bgmAudioS.volume < bgmVol)
+        /*while (bgmAudioS.volume < bgmVol)
         {
             bgmAudioS.volume += Time.deltaTime / 0.5f;
             yield return null;
-        }
+        }*/
+
+        yield return null;
     }
 }
