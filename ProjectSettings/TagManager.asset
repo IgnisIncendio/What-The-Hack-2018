@@ -16,6 +16,7 @@ TagManager:
   - Saucers
   - Torso
   - Head
+  - ScrewDriver
   layers:
   - Default
   - TransparentFX
@@ -29,9 +30,7 @@ TagManager:
   - Connection
   - PhysicalParts
   - FloatingText
-  - 
-  - 
-  - 
+  - ScrewDriver
   - 
   - 
   - 

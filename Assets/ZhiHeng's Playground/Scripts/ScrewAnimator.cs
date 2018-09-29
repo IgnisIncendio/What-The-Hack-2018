@@ -4,38 +4,39 @@ using UnityEngine;
 
 public class ScrewAnimator : MonoBehaviour
 {
+    public ConnectorBehaviour currentConnector;
+
+    private GameObject screw_screwDriver;
+    public GameObject screw_screwDriver_prefab;
+
     private bool runAnimation = false;
 
     private float screwDownSpd;
     private float rotationalSpd;
 
-    private GameObject screw;
-    private GameObject screwDriver;
-
     private void Update()
     {
-        if(runAnimation && screw && screwDriver)
+        if(runAnimation && screw_screwDriver)
         {
-            screw.transform.Translate(-transform.up * Time.deltaTime * screwDownSpd);
-            screwDriver.transform.Translate(-transform.up * Time.deltaTime * screwDownSpd);
-            screwDriver.transform.Rotate(new Vector3(0, rotationalSpd * Time.deltaTime, 0));
+            screw_screwDriver.transform.Translate(-transform.up * Time.deltaTime * screwDownSpd);
+            screw_screwDriver.transform.Rotate(new Vector3(0, rotationalSpd * Time.deltaTime, 0));
 
-            if (Vector3.Distance(transform.position, screw.transform.position) < 0.01f)
+            if (Vector3.Distance(transform.position, screw_screwDriver.transform.position) < 0.01f)
             {
+                currentConnector.NextStep();
                 Destroy(gameObject);
             }
+            //parent follow connector
+            transform.position = currentConnector.transform.position;
+            transform.rotation = currentConnector.transform.rotation;
         }
     }
     
-    public void StartAnimation(ScrewSO screwSO, ScrewDriverSO screwDriverSO)
+    public void StartAnimation()
     {
         runAnimation = true;
 
-        screw = Instantiate(screwSO.GetPrefab(), transform.position + new Vector3(0, screwSO.GetStartDistFromHole(), 0), transform.rotation);
-        screwDriver = Instantiate(screwDriverSO.GetPrefab(), transform.position + new Vector3(0, screwSO.GetStartDistFromHole(), 0), transform.rotation);
-        screwDownSpd = screwDriverSO.GetScrewDownSpd();
-        rotationalSpd = screwDriverSO.GetRotationalSpd();
-        screw.transform.parent = transform;
-        screwDriver.transform.parent = transform;
+        screw_screwDriver = Instantiate(screw_screwDriver_prefab, transform.position + new Vector3(0, -0.5f, 0), transform.rotation);
+        screw_screwDriver.transform.parent = transform;
     }
 }

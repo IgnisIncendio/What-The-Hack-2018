@@ -46,4 +46,9 @@ public class SectionManager : MonoBehaviour
 
         RequiredConnection[stepVal].gameObject.SetActive(true);
     }
+
+    public void PauseStep()
+    {
+        RequiredConnection[stepVal].gameObject.SetActive(false);
+    }
 }
