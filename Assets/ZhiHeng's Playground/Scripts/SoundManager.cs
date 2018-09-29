@@ -56,6 +56,8 @@ public class SoundManager : MonoBehaviour
         if (!bgmAudioS)
             return;
 
+        bgmAudioS.Stop();
+
         AudioClip audioToPlay = sfx_uiError;
         switch (bgm)
         {

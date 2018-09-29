@@ -32,5 +32,7 @@ public class MenuInteractable : MonoBehaviour
     }
 
     public virtual void Press()
-    { }
+    {
+        SoundManager.instance.PlaySFX(SoundManager.SFX.UI_CLICK);
+    }
 }
