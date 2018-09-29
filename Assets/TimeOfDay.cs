@@ -41,12 +41,13 @@ public class TimeOfDay : MonoBehaviour
 
     [SerializeField] private Transform sun;
     [SerializeField] private float transitionDuration = 0.5f;
+    [SerializeField] private string defaultTimeName;
     [SerializeField] private Time[] times;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        SetTimeOfDay(defaultTimeName, false);
     }
 
     // Update is called once per frame
@@ -55,15 +56,22 @@ public class TimeOfDay : MonoBehaviour
         
     }
 
-    public void SetTimeOfDay(string name)
+    public void SetTimeOfDay(string name, bool animated = true)
     {
-        SetTimeOfDay(GetTimeByName(name));
+        SetTimeOfDay(GetTimeByName(name), animated);
     }
 
-    private void SetTimeOfDay(Time time)
+    private void SetTimeOfDay(Time time, bool animated = true)
     {
-        sun.DORotateQuaternion(time.sunRotation, transitionDuration)
-            .SetEase(Ease.InOutCubic);
+        if (animated)
+        {
+            sun.DORotateQuaternion(time.sunRotation, transitionDuration)
+                .SetEase(Ease.InOutCubic);
+        }
+        else
+        {
+            sun.rotation = time.sunRotation;
+        }
     }
 
     private Time GetTimeByName(string name)
