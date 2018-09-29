@@ -4,7 +4,7 @@ using UnityEngine;
 public class SectionManager : MonoBehaviour
 {
     public BuildingManager m_Manager;
-
+    
     public int stepVal = 0;
 
     public List<ConnectorBehaviour> RequiredConnection = new List<ConnectorBehaviour>();

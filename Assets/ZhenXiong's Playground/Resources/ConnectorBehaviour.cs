@@ -33,6 +33,7 @@ public class ConnectorBehaviour : MonoBehaviour
                 print("Connect");
                 isOfficial = false;
 
+                other.GetComponent<Collider>().enabled = false;
                 other.GetComponent<ConnectorBehaviour>().followTransform = transform;
                 m_Manager.changeStep(1);
             }

@@ -8,6 +8,8 @@ public class BuildingManager : MonoBehaviour
 
     public int stepVal = 0;
 
+    public GameObject FullModel;
+
     private void Start()
     {
         Initiate();
@@ -21,7 +23,7 @@ public class BuildingManager : MonoBehaviour
             section.m_Manager = this;
         }
 
-        ListOfSteps[0].gameObject.SetActive(true);
+        ListOfSteps[stepVal].gameObject.SetActive(true);
     }
     
     public void SetSection(int changeVal)
@@ -30,6 +32,14 @@ public class BuildingManager : MonoBehaviour
 
         ++stepVal;
         
+        if(stepVal >= ListOfSteps.Count)
+        {
+            GameObject newModel = Instantiate(FullModel, transform.position, transform.rotation);
+
+            Destroy(gameObject);
+            return;
+        }
+
         ListOfSteps[stepVal].gameObject.SetActive(true);
     }
 }
