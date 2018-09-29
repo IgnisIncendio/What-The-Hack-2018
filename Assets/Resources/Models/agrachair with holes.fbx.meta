@@ -1,0 +1,190 @@
+fileFormatVersion: 2
+guid: b632a622e71b4da49a6bfe7ef788d498
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Chair headrest
+    100004: Chair Leg 1
+    100006: Chair Leg 2
+    100008: Chair Leg 3
+    100010: Chair Leg 4
+    100012: Chair Leg link 1
+    100014: Chair Leg Link 2
+    100016: Chair Link across 1
+    100018: Chair Link across 2
+    100020: Chair seat
+    100022: Chair Top 1
+    100024: Chair Top 2
+    100026: Chair Top 3
+    100028: Chair Top 4
+    100030: Nails chair across 1
+    100032: Nails chair across 2
+    100034: Nails chair link 1
+    100036: Nails chair link 2
+    100038: Nails Chair Top
+    400000: //RootNode
+    400002: Chair headrest
+    400004: Chair Leg 1
+    400006: Chair Leg 2
+    400008: Chair Leg 3
+    400010: Chair Leg 4
+    400012: Chair Leg link 1
+    400014: Chair Leg Link 2
+    400016: Chair Link across 1
+    400018: Chair Link across 2
+    400020: Chair seat
+    400022: Chair Top 1
+    400024: Chair Top 2
+    400026: Chair Top 3
+    400028: Chair Top 4
+    400030: Nails chair across 1
+    400032: Nails chair across 2
+    400034: Nails chair link 1
+    400036: Nails chair link 2
+    400038: Nails Chair Top
+    2100000: No Name
+    2100002: wire_214229166
+    2300000: Chair headrest
+    2300002: Chair Leg 1
+    2300004: Chair Leg 2
+    2300006: Chair Leg 3
+    2300008: Chair Leg 4
+    2300010: Chair Leg link 1
+    2300012: Chair Leg Link 2
+    2300014: Chair Link across 1
+    2300016: Chair Link across 2
+    2300018: Chair seat
+    2300020: Chair Top 1
+    2300022: Chair Top 2
+    2300024: Chair Top 3
+    2300026: Chair Top 4
+    2300028: Nails chair across 1
+    2300030: Nails chair across 2
+    2300032: Nails chair link 1
+    2300034: Nails chair link 2
+    2300036: Nails Chair Top
+    3300000: Chair headrest
+    3300002: Chair Leg 1
+    3300004: Chair Leg 2
+    3300006: Chair Leg 3
+    3300008: Chair Leg 4
+    3300010: Chair Leg link 1
+    3300012: Chair Leg Link 2
+    3300014: Chair Link across 1
+    3300016: Chair Link across 2
+    3300018: Chair seat
+    3300020: Chair Top 1
+    3300022: Chair Top 2
+    3300024: Chair Top 3
+    3300026: Chair Top 4
+    3300028: Nails chair across 1
+    3300030: Nails chair across 2
+    3300032: Nails chair link 1
+    3300034: Nails chair link 2
+    3300036: Nails Chair Top
+    4300000: Nails chair link 1
+    4300002: Nails chair across 1
+    4300004: Nails Chair Top
+    4300006: Chair Top 1
+    4300008: Chair Top 2
+    4300010: Chair Top 3
+    4300012: Chair Top 4
+    4300014: Chair Link across 2
+    4300016: Chair Leg 4
+    4300018: Chair seat
+    4300020: Chair Link across 1
+    4300022: Chair Leg Link 2
+    4300024: Chair Leg link 1
+    4300026: Nails chair across 2
+    4300028: Chair Leg 1
+    4300030: Chair Leg 2
+    4300032: Chair Leg 3
+    4300034: Chair headrest
+    4300036: Nails chair link 2
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
