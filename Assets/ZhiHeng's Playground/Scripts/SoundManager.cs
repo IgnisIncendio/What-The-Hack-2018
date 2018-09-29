@@ -61,29 +61,6 @@ public class SoundManager : MonoBehaviour
         bgmAudioS.volume = bgmVol;
     }
 
-    public void PlayBGM(BGM bgm)
-    {
-        if (!bgmAudioS)
-            return;
-
-        AudioClip audioToPlay = sfx_uiError;
-        switch (bgm)
-        {
-            case BGM.MORNING:
-                audioToPlay = bgm_morning;
-                break;
-            case BGM.AFTERNOON:
-                audioToPlay = bgm_afternoon;
-                break;
-            case BGM.NIGHT:
-                audioToPlay = bgm_night;
-                break;
-        }
-
-        bgmAudioS.clip = audioToPlay;
-        bgmAudioS.Play();
-    }
-
     public void PlaySFX(SFX sfx)
     {
         if (!sfxAudioS)
@@ -105,5 +82,44 @@ public class SoundManager : MonoBehaviour
 
         sfxAudioS.clip = audioToPlay;
         sfxAudioS.Play();
+    }
+
+    public void PlayBGM(BGM bgm)
+    {
+        if (!bgmAudioS)
+            return;
+
+        AudioClip audioToPlay = sfx_uiError;
+        switch (bgm)
+        {
+            case BGM.MORNING:
+                audioToPlay = bgm_morning;
+                break;
+            case BGM.AFTERNOON:
+                audioToPlay = bgm_afternoon;
+                break;
+            case BGM.NIGHT:
+                audioToPlay = bgm_night;
+                break;
+        }
+        StartCoroutine("FadeOutAndIn", audioToPlay);
+    }
+
+    private IEnumerator FadeOutAndIn(AudioClip newBGM)
+    {
+        while (bgmAudioS.volume > 0)
+        {
+            bgmAudioS.volume -= Time.deltaTime / 0.5f;
+            yield return null;
+        }
+
+        bgmAudioS.clip = newBGM;
+        bgmAudioS.Play();
+        
+        while (bgmAudioS.volume < bgmVol)
+        {
+            bgmAudioS.volume += Time.deltaTime / 0.5f;
+            yield return null;
+        }
     }
 }
