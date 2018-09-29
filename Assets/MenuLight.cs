@@ -8,6 +8,7 @@ public class MenuLight : MenuInteractable
 
     public override void Press()
     {
+        base.Press();
         lightSet.ToggleState();
     }
 }

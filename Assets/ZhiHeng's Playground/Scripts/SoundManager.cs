@@ -36,8 +36,8 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip bgm_night;
 
     [Header("Volume Control")]
-    [SerializeField] [Range(0, 1f)] private float sfxVol = 1f;
-    [SerializeField] [Range(0, 1f)] private float bgmVol = 1f;
+    [SerializeField] [Range(0, 1f)] private float sfxVol;
+    [SerializeField] [Range(0, 1f)] private float bgmVol;
 
     private void Start()
     {
@@ -89,6 +89,8 @@ public class SoundManager : MonoBehaviour
         if (!bgmAudioS)
             return;
 
+        bgmAudioS.Stop();
+
         AudioClip audioToPlay = sfx_uiError;
         switch (bgm)
         {
@@ -102,7 +104,26 @@ public class SoundManager : MonoBehaviour
                 audioToPlay = bgm_night;
                 break;
         }
-        bgmAudioS.clip = audioToPlay;
+        StartCoroutine("FadeOutAndIn", audioToPlay);
+    }
+
+    private IEnumerator FadeOutAndIn(AudioClip newBGM)
+    {
+        /*while (bgmAudioS.volume > 0)
+        {
+            bgmAudioS.volume -= Time.deltaTime / 0.5f;
+            yield return null;
+        }*/
+
+        bgmAudioS.clip = newBGM;
         bgmAudioS.Play();
+
+        /*while (bgmAudioS.volume < bgmVol)
+        {
+            bgmAudioS.volume += Time.deltaTime / 0.5f;
+            yield return null;
+        }*/
+
+        yield return null;
     }
 }

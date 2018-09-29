@@ -9,6 +9,7 @@ public class MenuTabButton : MenuInteractable
 
     public override void Press()
     {
+        base.Press();
         tabs.SetTab(tab);
     }
 }
