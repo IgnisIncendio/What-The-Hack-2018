@@ -4,10 +4,18 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - ExcludeTeleport
   - projectile
   - FxTemporaire
+  - ExcludeTeleport
   - TeleportIgnore
+  - Teleportable
+  - Leg
+  - SnapCube
+  - Arm
+  - SnapCylinder
+  - Saucers
+  - Torso
+  - Head
   layers:
   - Default
   - TransparentFX
@@ -20,6 +28,8 @@ TagManager:
   - PostProcessing
   - Connection
   - PhysicalParts
+  - FloatingText
+  - 
   - 
   - 
   - 
