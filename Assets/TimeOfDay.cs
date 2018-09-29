@@ -84,7 +84,7 @@ public class TimeOfDay : MonoBehaviour
             }
         }
 
-        throw new System.IndexOutOfRangeException();
+        throw new System.ArgumentOutOfRangeException();
     }
 
 #if UNITY_EDITOR

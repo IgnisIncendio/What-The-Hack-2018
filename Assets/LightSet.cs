@@ -7,28 +7,11 @@ public class LightSet : MonoBehaviour
     [SerializeField] private Light[] lights;
     [SerializeField] private bool defaultState = false;
     private bool state;
-    public bool State
-    {
-        get
-        {
-            return state;
-        }
-        set
-        {
-            state = value;
-
-            // Set lights
-            foreach (Light light in lights)
-            {
-                light.enabled = state;
-            }
-        }
-    }
 
     // Start is called before the first frame update
     void Start()
     {
-        State = defaultState;
+        SetState(defaultState);
     }
 
     // Update is called once per frame
@@ -39,6 +22,15 @@ public class LightSet : MonoBehaviour
 
     public void ToggleState()
     {
-        State = State ? false : true;
+        SetState(state ? false : true);
+    }
+
+    private void SetState(bool state)
+    {
+        this.state = state;
+        foreach (Light light in lights)
+        {
+            light.enabled = state;
+        }
     }
 }
