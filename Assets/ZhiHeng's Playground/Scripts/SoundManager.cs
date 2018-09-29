@@ -35,6 +35,10 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip bgm_afternoon;
     [SerializeField] private AudioClip bgm_night;
 
+    [Header("Volume Control")]
+    [SerializeField] [Range(0, 1f)] private float sfxVol;
+    [SerializeField] [Range(0, 1f)] private float bgmVol;
+
     private void Start()
     {
         if (instance)
@@ -49,6 +53,12 @@ public class SoundManager : MonoBehaviour
         bgmAudioS = gameObject.AddComponent<AudioSource>();
         bgmAudioS.playOnAwake = false;
         bgmAudioS.loop = true;
+    }
+
+    private void Update()
+    {
+        sfxAudioS.volume = sfxVol;
+        bgmAudioS.volume = bgmVol;
     }
 
     public void PlayBGM(BGM bgm)
