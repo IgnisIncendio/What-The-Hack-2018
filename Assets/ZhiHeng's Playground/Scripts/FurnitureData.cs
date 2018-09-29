@@ -2,18 +2,18 @@
 using UnityEngine;
 
 [CreateAssetMenu]
-public class BlockConnectionDataStorage : ScriptableObject
+public class FurnitureData : ScriptableObject
 {
     [SerializeField]
-    private List<BlockConnectionData> blockConnectionDataList = new List<BlockConnectionData>();
+    private List<ComponentConnData> blockConnectionDataList = new List<ComponentConnData>();
 
-    public void SetConnectionDataList(List<BlockConnectionData> newData)
+    public void SetConnectionDataList(List<ComponentConnData> newData)
     {
         blockConnectionDataList.Clear();
         blockConnectionDataList = newData;
     }
 
-    public List<BlockConnectionData> GetConnectionDataList()
+    public List<ComponentConnData> GetConnectionDataList()
     {
         return blockConnectionDataList;
     }
@@ -25,7 +25,7 @@ public class BlockConnectionDataStorage : ScriptableObject
 }
 
 [System.Serializable]
-public class BlockConnectionData
+public class ComponentConnData
 {
     public string blockAName;
     public string blockAConnection;
