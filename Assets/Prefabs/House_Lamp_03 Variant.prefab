@@ -1,105 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3783146996840411946
+--- !u!1 &4147995834608535553
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
   m_Component:
-  - component: {fileID: 6006552666179106490}
-  - component: {fileID: 6913512324866546019}
+  - component: {fileID: 9063359280070796633}
   m_Layer: 0
-  m_Name: Spot Light
+  m_Name: House_Lamp_03 Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6006552666179106490
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3783146996840411946}
-  m_LocalRotation: {x: 0.29209802, y: -0.6439545, z: 0.29209873, w: 0.6439564}
-  m_LocalPosition: {x: -0.0658, y: -0.2037, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4147995834608505889}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 48.798004, y: -90.00001, z: 0}
---- !u!108 &6913512324866546019
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3783146996840411946}
-  m_Enabled: 0
-  serializedVersion: 8
-  m_Type: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 77
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0
-    m_NormalBias: 0
-    m_NearPlane: 0.1
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!1 &4147995834608535553 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: d32d9aac8b9c9a741adbb71686874746, type: 3}
-  m_PrefabInstance: {fileID: 4147995834608635553}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &4147995834608505889 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: d32d9aac8b9c9a741adbb71686874746, type: 3}
-  m_PrefabInstance: {fileID: 4147995834608635553}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &9063359280070796633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4147995834608535553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97e3802c158b1f348b445cbf0159b61f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  light: {fileID: 6913512324866546019}
-  emissionRenderer: {fileID: 4147995834606606023}
---- !u!23 &4147995834606606023 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2300006, guid: d32d9aac8b9c9a741adbb71686874746, type: 3}
-  m_PrefabInstance: {fileID: 4147995834608635553}
-  m_PrefabAsset: {fileID: 0}
+  m_IsActive: 0
 --- !u!1001 &4147995834608635553
-PrefabInstance:
+Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
@@ -154,4 +71,22 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d32d9aac8b9c9a741adbb71686874746, type: 3}
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 0}
+  m_IsPrefabParent: 0
+--- !u!114 &9063359280070796633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 4147995834608535553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e3802c158b1f348b445cbf0159b61f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  light: {fileID: 0}
+  emissionRenderer: {fileID: 0}
