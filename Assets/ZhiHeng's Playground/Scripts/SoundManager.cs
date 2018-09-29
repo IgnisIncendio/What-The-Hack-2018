@@ -35,6 +35,10 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip bgm_afternoon;
     [SerializeField] private AudioClip bgm_night;
 
+    [Header("Volume Control")]
+    [SerializeField] [Range(0, 1f)] private float sfxVol;
+    [SerializeField] [Range(0, 1f)] private float bgmVol;
+
     private void Start()
     {
         if (instance)
@@ -51,29 +55,10 @@ public class SoundManager : MonoBehaviour
         bgmAudioS.loop = true;
     }
 
-    public void PlayBGM(BGM bgm)
+    private void Update()
     {
-        if (!bgmAudioS)
-            return;
-
-        bgmAudioS.Stop();
-
-        AudioClip audioToPlay = sfx_uiError;
-        switch (bgm)
-        {
-            case BGM.MORNING:
-                audioToPlay = bgm_morning;
-                break;
-            case BGM.AFTERNOON:
-                audioToPlay = bgm_afternoon;
-                break;
-            case BGM.NIGHT:
-                audioToPlay = bgm_night;
-                break;
-        }
-
-        bgmAudioS.clip = audioToPlay;
-        bgmAudioS.Play();
+        sfxAudioS.volume = sfxVol;
+        bgmAudioS.volume = bgmVol;
     }
 
     public void PlaySFX(SFX sfx)
@@ -97,5 +82,46 @@ public class SoundManager : MonoBehaviour
 
         sfxAudioS.clip = audioToPlay;
         sfxAudioS.Play();
+    }
+
+    public void PlayBGM(BGM bgm)
+    {
+        if (!bgmAudioS)
+            return;
+
+        bgmAudioS.Stop();
+
+        AudioClip audioToPlay = sfx_uiError;
+        switch (bgm)
+        {
+            case BGM.MORNING:
+                audioToPlay = bgm_morning;
+                break;
+            case BGM.AFTERNOON:
+                audioToPlay = bgm_afternoon;
+                break;
+            case BGM.NIGHT:
+                audioToPlay = bgm_night;
+                break;
+        }
+        StartCoroutine("FadeOutAndIn", audioToPlay);
+    }
+
+    private IEnumerator FadeOutAndIn(AudioClip newBGM)
+    {
+        while (bgmAudioS.volume > 0)
+        {
+            bgmAudioS.volume -= Time.deltaTime / 0.5f;
+            yield return null;
+        }
+
+        bgmAudioS.clip = newBGM;
+        bgmAudioS.Play();
+
+        while (bgmAudioS.volume < bgmVol)
+        {
+            bgmAudioS.volume += Time.deltaTime / 0.5f;
+            yield return null;
+        }
     }
 }
