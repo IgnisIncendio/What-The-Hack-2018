@@ -20,7 +20,7 @@ public class ScrewAnimator : MonoBehaviour
             screwDriver.transform.Translate(-transform.up * Time.deltaTime * screwDownSpd);
             screwDriver.transform.Rotate(new Vector3(0, rotationalSpd * Time.deltaTime, 0));
 
-            if(Vector3.Distance(transform.position, screw.transform.position) < 0.01f)
+            if (Vector3.Distance(transform.position, screw.transform.position) < 0.01f)
             {
                 Destroy(gameObject);
             }
@@ -33,6 +33,8 @@ public class ScrewAnimator : MonoBehaviour
 
         screw = Instantiate(screwSO.GetPrefab(), transform.position + new Vector3(0, screwSO.GetStartDistFromHole(), 0), transform.rotation);
         screwDriver = Instantiate(screwDriverSO.GetPrefab(), transform.position + new Vector3(0, screwSO.GetStartDistFromHole(), 0), transform.rotation);
+        screwDownSpd = screwDriverSO.GetScrewDownSpd();
+        rotationalSpd = screwDriverSO.GetRotationalSpd();
         screw.transform.parent = transform;
         screwDriver.transform.parent = transform;
     }

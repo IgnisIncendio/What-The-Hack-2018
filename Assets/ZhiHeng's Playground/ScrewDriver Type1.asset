@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ScrewDriver Type1
   m_EditorClassIdentifier: 
   prefab: {fileID: 7236634567600027944, guid: 64dc1ccb1d773e84d808f2e55e385977, type: 3}
-  screwDownSpd: 2
+  screwDownSpd: 0.05
   rotationalSpd: 500

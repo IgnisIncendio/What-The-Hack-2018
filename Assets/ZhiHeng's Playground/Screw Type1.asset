@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Screw Type1
   m_EditorClassIdentifier: 
   prefab: {fileID: 7906236439069909136, guid: efbdf3fd390863740948ad88470079ce, type: 3}
-  startDistFromHole: 0.3
+  startDistFromHole: 0.2
