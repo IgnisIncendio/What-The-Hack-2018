@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LightSet : MonoBehaviour
 {
-    [SerializeField] private Light[] lights;
+    [SerializeField] private Lamp[] lamps;
     [SerializeField] private bool defaultState = false;
     private bool state;
 
@@ -28,7 +28,7 @@ public class LightSet : MonoBehaviour
     private void SetState(bool state)
     {
         this.state = state;
-        foreach (Light light in lights)
+        foreach (Lamp light in lamps)
         {
             light.enabled = state;
         }
