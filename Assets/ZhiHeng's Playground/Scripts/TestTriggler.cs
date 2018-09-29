@@ -24,4 +24,16 @@ public class TestTriggler : MonoBehaviour
     {
         dottedLineComponent.SetPoints(point1, point2);
     }
+
+    [ContextMenu("TriggerNight")]
+    private void TriggerNight()
+    {
+        SoundManager.instance.PlayBGM(SoundManager.BGM.NIGHT);
+    }
+
+    [ContextMenu("TriggerDay")]
+    private void TriggerDay()
+    {
+        SoundManager.instance.PlayBGM(SoundManager.BGM.MORNING);
+    }
 }

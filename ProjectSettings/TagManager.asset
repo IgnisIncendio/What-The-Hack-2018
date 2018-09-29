@@ -16,7 +16,6 @@ TagManager:
   - Saucers
   - Torso
   - Head
-  - Far Moveable
   layers:
   - Default
   - TransparentFX
@@ -30,6 +29,8 @@ TagManager:
   - Connection
   - PhysicalParts
   - FloatingText
+  - 
+  - 
   - 
   - 
   - 
