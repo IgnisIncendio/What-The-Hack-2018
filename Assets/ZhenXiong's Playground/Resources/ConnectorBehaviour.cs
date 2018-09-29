@@ -4,15 +4,39 @@ using UnityEngine;
 
 public class ConnectorBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public SectionManager m_Manager;
+    public Parts_ScriptableObject part_ScriptableObject;
+    public bool isOfficial = false;
+
+    public Transform followTransform;
+    
+    public void Initiate(SectionManager manage)
     {
-        
+        m_Manager = manage;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (followTransform)
+        {
+            transform.position = followTransform.position;
+            transform.rotation = followTransform.rotation;
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<ConnectorBehaviour>().part_ScriptableObject.m_PartName == part_ScriptableObject.m_PartName)
+        {
+            if (isOfficial)
+            {   
+                print("Connect");
+                isOfficial = false;
+
+                other.GetComponent<Collider>().enabled = false;
+                other.GetComponent<ConnectorBehaviour>().followTransform = transform;
+                m_Manager.changeStep(1);
+            }
+        }
     }
 }

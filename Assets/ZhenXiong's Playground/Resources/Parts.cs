@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScrewBehaviour : MonoBehaviour
+public class Parts : MonoBehaviour
 {
-    [SerializeField]    
-    private Animator m_Animator;
     // Start is called before the first frame update
     void Start()
     {
