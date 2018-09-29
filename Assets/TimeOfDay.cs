@@ -37,6 +37,7 @@ public class TimeOfDay : MonoBehaviour
     {
         public string name;
         public Quaternion sunRotation;
+        public SoundManager.BGM ambience;
     }
 
     [SerializeField] private Transform sun;
@@ -66,11 +67,16 @@ public class TimeOfDay : MonoBehaviour
         if (animated)
         {
             sun.DORotateQuaternion(time.sunRotation, transitionDuration)
-                .SetEase(Ease.InOutCubic);
+                .SetEase(Ease.InOutCubic)
+                .OnComplete(() =>
+                {
+                    SoundManager.instance.PlayBGM(time.ambience);
+                });
         }
         else
         {
             sun.rotation = time.sunRotation;
+            SoundManager.instance.PlayBGM(time.ambience);
         }
     }
 

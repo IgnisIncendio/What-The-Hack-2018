@@ -10,8 +10,6 @@ public class MenuSpawn : MenuInteractable
     public override void Press()
     {
         base.Press();
-
-        // Begin spawn
         spawnPointer.BeginSpawn(spawnedObject);
     }
 }
