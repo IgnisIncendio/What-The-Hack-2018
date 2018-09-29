@@ -9,6 +9,7 @@ public class MenuTime : MenuInteractable
 
     public override void Press()
     {
+        base.Press();
         timeOfDay.SetTimeOfDay(timeName);
     }
 }
