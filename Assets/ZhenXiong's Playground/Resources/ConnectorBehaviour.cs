@@ -72,6 +72,8 @@ public class ConnectorBehaviour : MonoBehaviour
                     transform.gameObject.SetActive(false);
                     other.GetComponent<ConnectorBehaviour>().newPos = gameObject;
                 }
+
+                SoundManager.instance.PlaySFX(SoundManager.SFX.FURNIT_CONN);
             }
         }
         else if(other.tag == "ScrewDriver" && needAnimation && m_Manager && !isOfficial)
@@ -83,6 +85,12 @@ public class ConnectorBehaviour : MonoBehaviour
             screwDriver = other.gameObject;
 
             screwDriver.SetActive(false);
+
+            Collider[] allCollider = GetComponentsInChildren<Collider>();
+            foreach(Collider col in allCollider)
+            {
+                col.isTrigger = true;
+            }
         }
     }
 
@@ -97,5 +105,6 @@ public class ConnectorBehaviour : MonoBehaviour
         screwDriver.gameObject.SetActive(true);
         screwDriver = null;
         m_Manager.changeStep(1);
+        SoundManager.instance.PlaySFX(SoundManager.SFX.FURNIT_CONN);
     }
 }
