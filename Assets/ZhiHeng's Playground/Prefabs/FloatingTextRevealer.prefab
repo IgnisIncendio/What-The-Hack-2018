@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7840187220338196722}
   - component: {fileID: 7840187220338196720}
   - component: {fileID: 7840187220338196721}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: FloatingTextRevealer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,10 +53,10 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7840187220338196620}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3.57
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &7840187220338196721
 Rigidbody:
