@@ -57,11 +57,10 @@ public class ConnectorBehaviour : MonoBehaviour
                 }
             }
         }
-        else if(other.tag == "ScrewDriver" && needAnimation && m_Manager)
+        else if(other.tag == "ScrewDriver" && needAnimation && m_Manager && !isOfficial)
         {
             GameObject newScrewAnimation = Instantiate(screwAnimationPrefab, transform.position,transform.rotation);
             newScrewAnimation.GetComponent<ScrewAnimator>().currentConnector = this;
-            newScrewAnimation.GetComponent<ScrewAnimator>().StartAnimation();
             needAnimation = false;
             
             screwDriver = other.gameObject;
@@ -73,7 +72,11 @@ public class ConnectorBehaviour : MonoBehaviour
     public GameObject newPos;
     public void NextStep()
     {
-        newPos.transform.position += transform.forward * 0.125f;
+        print(newPos);
+        newPos.transform.position -= transform.up * 0.005f;
+
+        newPos.GetComponent<Collider>().enabled = false;
+
         screwDriver.gameObject.SetActive(true);
         screwDriver = null;
         m_Manager.changeStep(1);

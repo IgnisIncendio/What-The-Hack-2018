@@ -6,22 +6,24 @@ public class ScrewAnimator : MonoBehaviour
 {
     public ConnectorBehaviour currentConnector;
 
-    private Animator animator;
+    [SerializeField] private Animator animator;
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        animator.SetTrigger("screwin");
+        Invoke("EndAnimation", 2f);
     }
-    
-    public void StartAnimation()
+
+    private void Update()
     {
-        animator.Play("screwin");
-        Invoke("EndAnimation", 3);
+        if (currentConnector)
+            transform.parent = currentConnector.transform.parent;
     }
 
     private void EndAnimation()
     {
-        currentConnector.NextStep();
+        if(currentConnector)
+            currentConnector.NextStep();
         Destroy(gameObject);
     }
 }

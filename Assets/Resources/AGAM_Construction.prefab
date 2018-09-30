@@ -1,5 +1,72 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!4 &162689730 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 9a9794e857e748b439487078c36ef5c8, type: 3}
+  m_PrefabInstance: {fileID: 162818114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &384771608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 384771609}
+  - component: {fileID: 384771610}
+  - component: {fileID: 384771611}
+  m_Layer: 9
+  m_Name: PileDriver
+  m_TagString: ScrewDriver
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &384771609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384771608}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.74, y: -0.76873326, z: 2.13}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children:
+  - {fileID: 162689730}
+  m_Father: {fileID: 2336653446846255629}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &384771610
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384771608}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &384771611
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384771608}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2336653446740694082
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,7 +719,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -763,7 +830,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -985,7 +1052,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -1042,6 +1109,7 @@ Transform:
   - {fileID: 2336653447984115412}
   - {fileID: 2336653448708803871}
   - {fileID: 2336653447569108959}
+  - {fileID: 384771609}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1095,14 +1163,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2336653446850026185}
-  m_LocalRotation: {x: -1, y: -0.00037896624, z: -0.00000038917105, w: 0.0000033851902}
-  m_LocalPosition: {x: -0.011, y: -0.1561, z: 0.0038}
+  m_LocalRotation: {x: -0.7071089, y: -0.00026774505, z: -0.00026846025, w: -0.7071046}
+  m_LocalPosition: {x: -0.011000007, y: -0.15610018, z: 0.0038000105}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2336653446781113699}
   m_Father: {fileID: 2336653448828044639}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -180, y: 0, z: -0.04296875}
+  m_LocalEulerAnglesHint: {x: -270.034, y: 0, z: 0.044000003}
 --- !u!114 &2336653446850026230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1118,7 +1186,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -1164,7 +1232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2336653446858874996}
   m_LocalRotation: {x: -0.4999042, y: -0.5000935, z: 0.4999061, w: 0.50009614}
-  m_LocalPosition: {x: 0.07406281, y: 1.2419901, z: -1.45}
+  m_LocalPosition: {x: 0.074, y: 1.243, z: -3.671}
   m_LocalScale: {x: 7.994304, y: 7.9943023, z: 7.994305}
   m_Children:
   - {fileID: 2336653447722953356}
@@ -1186,7 +1254,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -1270,7 +1338,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -1445,7 +1513,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -1525,7 +1593,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -2399,7 +2467,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -2492,7 +2560,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -3502,7 +3570,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -3566,7 +3634,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -3880,7 +3948,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -4077,7 +4145,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -4235,7 +4303,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 38e3273811e9d1b40804ee1bd52614ad, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -4505,14 +4573,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2336653447218960082}
-  m_LocalRotation: {x: -0.7071054, y: -0.0002678026, z: 0.000000058613765, w: 0.70710814}
-  m_LocalPosition: {x: 0.1378, y: -0.1435, z: -0.0264}
+  m_LocalRotation: {x: -1, y: -0.00018951295, z: -0.00018938434, w: 0.0000016424536}
+  m_LocalPosition: {x: 0.1378, y: -0.1382, z: -0.0264}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2336653448596932312}
   m_Father: {fileID: 2336653448836537672}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -180, y: -0.021972656, z: -0.021972656}
 --- !u!114 &2336653447218960095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4528,7 +4596,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -4627,7 +4695,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -4841,14 +4909,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2336653447283798635}
-  m_LocalRotation: {x: 0.9659253, y: 0.000369142, z: 0.25882092, w: -0.000012164706}
-  m_LocalPosition: {x: 0.2997, y: 0.1004, z: -0.2368}
+  m_LocalRotation: {x: 0.68302137, y: -0.18275312, z: 0.18327518, w: 0.68300325}
+  m_LocalPosition: {x: 0.2997068, y: 0.100400396, z: -0.23679948}
   m_LocalScale: {x: 1.0000036, y: 1.0000036, z: 1.0000014}
   m_Children:
   - {fileID: 2336653447524088515}
   m_Father: {fileID: 2336653448831547711}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -360.012, y: 150, z: -180.04}
+  m_LocalEulerAnglesHint: {x: -269.97202, y: 180, z: -149.958}
 --- !u!114 &2336653447283798632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4864,7 +4932,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -4932,7 +5000,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -5474,14 +5542,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2336653447363525656}
-  m_LocalRotation: {x: 0.00008883535, y: -0.25882074, z: 0.0000033484014, w: -0.9659254}
-  m_LocalPosition: {x: 0.2997, y: 0.0989, z: -0.0548}
+  m_LocalRotation: {x: 0.68307513, y: -0.1830162, z: -0.18301207, w: -0.6829496}
+  m_LocalPosition: {x: 0.29971212, y: 0.098901704, z: -0.054802354}
   m_LocalScale: {x: 1.0000024, y: 1.0000023, z: 1.0000013}
   m_Children:
   - {fileID: 2336653448822202384}
   m_Father: {fileID: 2336653448831547711}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -360.01, y: 30.000002, z: -0.003}
+  m_LocalEulerAnglesHint: {x: -450, y: 0, z: 30.003002}
 --- !u!114 &2336653447363525637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5497,7 +5565,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -5669,7 +5737,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -5829,14 +5897,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2336653447398613554}
-  m_LocalRotation: {x: -1, y: -0.0003792047, z: -0.0000017162245, w: 0.0000063989423}
-  m_LocalPosition: {x: -0.012, y: 0.1527, z: 0.0085}
+  m_LocalRotation: {x: -0.70711136, y: -0.000267, z: -0.00026950333, w: -0.7071022}
+  m_LocalPosition: {x: -0.012000008, y: 0.1527001, z: 0.008499946}
   m_LocalScale: {x: 1.0000007, y: 1.0000005, z: 1.0000008}
   m_Children:
   - {fileID: 2336653447852781217}
   m_Father: {fileID: 2336653448828044639}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -179.999, y: 0, z: -0.04296875}
+  m_LocalEulerAnglesHint: {x: -270.034, y: 0, z: 0.044000003}
 --- !u!114 &2336653447398613553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5852,7 +5920,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -6409,7 +6477,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -6488,7 +6556,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 0}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -6519,14 +6587,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2336653447474922018}
-  m_LocalRotation: {x: 0.00008883537, y: -0.25882077, z: 0.0000034080065, w: -0.96592546}
-  m_LocalPosition: {x: 0.2998, y: -0.0985, z: -0.2582}
+  m_LocalRotation: {x: 0.6830753, y: -0.18301584, z: -0.18301162, w: -0.68294954}
+  m_LocalPosition: {x: 0.29980564, y: -0.09849956, z: -0.25820053}
   m_LocalScale: {x: 1.0000007, y: 1.0000005, z: 1.0000008}
   m_Children:
   - {fileID: 2336653447785749370}
   m_Father: {fileID: 2336653448831547711}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -360.01, y: 30.000002, z: -0.003}
+  m_LocalEulerAnglesHint: {x: -450, y: 0, z: 30.003002}
 --- !u!114 &2336653447474922031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6542,7 +6610,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -6801,14 +6869,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2336653447530563148}
-  m_LocalRotation: {x: -0.7071052, y: -0.00026783242, z: -0.00000044802565, w: 0.7071083}
-  m_LocalPosition: {x: -0.011, y: -0.1613, z: -0.149}
+  m_LocalRotation: {x: -1, y: -0.00018921492, z: -0.00018980348, w: 0.0000020241139}
+  m_LocalPosition: {x: -0.011000007, y: -0.16130003, z: -0.14899994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2336653447369995624}
   m_Father: {fileID: 2336653448306569537}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -180, y: -0.021972656, z: -0.021972656}
 --- !u!114 &2336653447530563145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6824,7 +6892,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -6901,7 +6969,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -7165,7 +7233,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -7439,7 +7507,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -7577,7 +7645,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2336653447569108959
 Transform:
   m_ObjectHideFlags: 0
@@ -7659,7 +7727,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -8269,14 +8337,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2336653447641187320}
-  m_LocalRotation: {x: -1, y: -0.00018921492, z: -0.0001898146, w: 0.0000023290347}
-  m_LocalPosition: {x: -0.0115, y: 0.1682, z: 0.0166}
+  m_LocalRotation: {x: 0.7071087, y: -0.00000047582435, z: 0.00026822186, w: 0.707105}
+  m_LocalPosition: {x: -0.0115, y: 0.1556, z: -0.0028}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2336653448520008087}
   m_Father: {fileID: 2336653447471797624}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -180, y: -0.021972656, z: -0.021972656}
+  m_LocalEulerAnglesHint: {x: -630, y: 0, z: 0.043}
 --- !u!114 &2336653447641187301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8292,7 +8360,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -8427,14 +8495,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2336653447668299811}
-  m_LocalRotation: {x: -0.7071118, y: -0.00026866887, z: -0.0000010440716, w: -0.70710176}
-  m_LocalPosition: {x: -0.012, y: 0.1593, z: -0.1498}
+  m_LocalRotation: {x: -0.000006506575, y: -0.0001891495, z: -0.00019091362, w: -1}
+  m_LocalPosition: {x: -0.012000008, y: 0.15930003, z: -0.14979999}
   m_LocalScale: {x: 1.0000007, y: 1.0000005, z: 1.0000008}
   m_Children:
   - {fileID: 2336653448459044697}
   m_Father: {fileID: 2336653448306569537}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -270.02, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -359.999, y: 0.022000002, z: 0.022000002}
 --- !u!114 &2336653447668299808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8450,7 +8518,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -8710,7 +8778,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2336653447703648745}
   m_LocalRotation: {x: -1, y: -0.00000014901156, z: -0.00000021201804, w: -0.0000008306682}
-  m_LocalPosition: {x: 0.0992, y: -0.0154, z: -0.067}
+  m_LocalPosition: {x: 0.0992, y: -0.0109, z: -0.0543}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2336653447593519327}
@@ -8732,7 +8800,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -9247,7 +9315,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -9984,7 +10052,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -10171,7 +10239,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -10496,7 +10564,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -11150,7 +11218,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -11460,7 +11528,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -11759,7 +11827,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -12200,7 +12268,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -12290,7 +12358,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -12512,7 +12580,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -12876,7 +12944,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -13149,7 +13217,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -13337,7 +13405,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -13629,7 +13697,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -13833,7 +13901,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -14064,7 +14132,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -14209,7 +14277,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 0}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -14318,6 +14386,7 @@ GameObject:
   - component: {fileID: 2336653448219821505}
   - component: {fileID: 2336653448219821519}
   - component: {fileID: 2336653448219821504}
+  - component: {fileID: 79557555}
   m_Layer: 9
   m_Name: RealConnection (1)
   m_TagString: Untagged
@@ -14355,7 +14424,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -14374,6 +14443,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.053128134, z: 0.02}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &79557555
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2336653448219821506}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2336653448232296420
 GameObject:
   m_ObjectHideFlags: 0
@@ -14704,7 +14789,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -14956,7 +15041,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -15116,14 +15201,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2336653448296291563}
-  m_LocalRotation: {x: 0.9659252, y: 0.0003691122, z: 0.25882092, w: -0.000012164706}
-  m_LocalPosition: {x: 0.2998, y: -0.1033, z: -0.0442}
+  m_LocalRotation: {x: -0.68302125, y: 0.18275315, z: -0.18327516, w: -0.6830034}
+  m_LocalPosition: {x: 0.29980868, y: -0.10329874, z: -0.044194374}
   m_LocalScale: {x: 1.0000044, y: 1.0000043, z: 1.0000033}
   m_Children:
   - {fileID: 2336653447057247773}
   m_Father: {fileID: 2336653448831547711}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -360.012, y: 150, z: -180.04}
+  m_LocalEulerAnglesHint: {x: -629.98, y: 180, z: -149.959}
 --- !u!114 &2336653448296291560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15139,7 +15224,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -15424,7 +15509,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 0}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -15481,7 +15566,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -15703,7 +15788,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -15846,7 +15931,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -15900,14 +15985,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2336653448387615047}
-  m_LocalRotation: {x: -0.000009690921, y: -0.0000023473983, z: 0.0000008344654, w: -1}
-  m_LocalPosition: {x: -0.0119, y: -0.1558, z: -0.3072}
+  m_LocalRotation: {x: 0.685931, y: -0.0000022353381, z: -0.0000013094375, w: -0.7276665}
+  m_LocalPosition: {x: -0.01190001, y: -0.15579964, z: -0.3071994}
   m_LocalScale: {x: 1.0000007, y: 1.0000005, z: 1.0000008}
   m_Children:
   - {fileID: 2336653448376092679}
   m_Father: {fileID: 2336653448502474456}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -359.999, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -446.618, y: 0.001, z: -0.001}
 --- !u!114 &2336653448387615044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15923,7 +16008,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -16519,7 +16604,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 38e3273811e9d1b40804ee1bd52614ad, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -16573,7 +16658,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -16717,7 +16802,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 0}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -16969,7 +17054,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -17128,7 +17213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2336653448595703695
 Transform:
   m_ObjectHideFlags: 0
@@ -17313,7 +17398,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 0}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -17653,8 +17738,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2336653448636993248}
-  m_LocalRotation: {x: 0.000000057612105, y: 0.00000005759024, z: 0.7069729, w: 0.70724076}
-  m_LocalPosition: {x: 0.09837973, y: 2.121354, z: 2.9348202}
+  m_LocalRotation: {x: -0.50000876, y: 0.49999127, z: 0.49999127, w: 0.50000876}
+  m_LocalPosition: {x: 0.0981583, y: 1.5436015, z: 3.0928206}
   m_LocalScale: {x: 7.9943213, y: 7.994321, z: 7.9942994}
   m_Children:
   - {fileID: 2336653447338720485}
@@ -17662,7 +17747,7 @@ Transform:
   - {fileID: 2336653447550075234}
   m_Father: {fileID: 2336653447721806575}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0.117000006, z: 89.881004}
 --- !u!114 &2336653448636993259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17678,7 +17763,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -17951,7 +18036,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -18203,7 +18288,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -18879,7 +18964,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -19414,7 +19499,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -19654,7 +19739,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -19747,7 +19832,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -20060,7 +20145,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 0}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -20116,7 +20201,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 0}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -20169,7 +20254,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 0}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -20323,14 +20408,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2336653448850754554}
-  m_LocalRotation: {x: -0.0000074457776, y: -0.00018919038, z: -0.00019034739, w: -1}
-  m_LocalPosition: {x: -0.012, y: 0.148, z: -0.317}
+  m_LocalRotation: {x: 0.70710105, y: 0.0000011314755, z: -0.0002683391, w: -0.7071125}
+  m_LocalPosition: {x: -0.0071, y: 0.148, z: -0.2983}
   m_LocalScale: {x: 1.0000007, y: 1.0000005, z: 1.0000008}
   m_Children:
   - {fileID: 2336653448003492634}
   m_Father: {fileID: 2336653447471797624}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -359.999, y: 0.022000002, z: 0.022000002}
+  m_LocalEulerAnglesHint: {x: -449.98, y: 0, z: 0.043}
 --- !u!114 &2336653448850754535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20346,7 +20431,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 1
   screwAnimatorSetting: {fileID: 0}
@@ -20491,7 +20576,7 @@ MonoBehaviour:
   m_Manager: {fileID: 0}
   part_ScriptableObject: {fileID: 11400000, guid: 50ca0e19ccc34a54cb468186596ffa89, type: 2}
   isOfficial: 0
-  screwAnimationPrefab: {fileID: 1180550395691431970, guid: b38b4fb5d508c304cb6a9a135530fdc4, type: 3}
+  screwAnimationPrefab: {fileID: 2855910602268607937, guid: 78c18ec7fa0e4c8488ce4ed85de61939, type: 3}
   followTransform: {fileID: 0}
   needAnimation: 0
   screwAnimatorSetting: {fileID: 0}
@@ -20526,6 +20611,75 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!1001 &162818114
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 384771609}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 9a9794e857e748b439487078c36ef5c8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9a9794e857e748b439487078c36ef5c8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9a9794e857e748b439487078c36ef5c8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9a9794e857e748b439487078c36ef5c8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9a9794e857e748b439487078c36ef5c8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9a9794e857e748b439487078c36ef5c8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9a9794e857e748b439487078c36ef5c8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9a9794e857e748b439487078c36ef5c8, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9a9794e857e748b439487078c36ef5c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9a9794e857e748b439487078c36ef5c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9a9794e857e748b439487078c36ef5c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9a9794e857e748b439487078c36ef5c8, type: 3}
+      propertyPath: m_Name
+      value: 100001 piledriver2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9a9794e857e748b439487078c36ef5c8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9a9794e857e748b439487078c36ef5c8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9a9794e857e748b439487078c36ef5c8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9a9794e857e748b439487078c36ef5c8, type: 3}
 --- !u!1001 &2336653446778123041
 PrefabInstance:
   m_ObjectHideFlags: 0
