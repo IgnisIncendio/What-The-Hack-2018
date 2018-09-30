@@ -32,6 +32,11 @@ public class ConnectorBehaviour : MonoBehaviour
         {
             m_Manager = transform.parent.parent.GetComponent<SectionManager>();
         }
+
+        if (!m_Manager)
+        {
+            needAnimation = false;
+        }
     }
 
     private void Update()
@@ -108,7 +113,7 @@ public class ConnectorBehaviour : MonoBehaviour
         else if (other.tag == "ScrewDriver" && needAnimation && m_Manager && !isOfficial)
         {
             // Spawning animation
-            if (other.gameObject.GetComponent<VRTK.VRTK_InteractableObject>().IsGrabbed())
+            if (!other.gameObject.GetComponent<VRTK.VRTK_InteractableObject>().IsGrabbed())
             {
                 GameObject newScrewAnimation = Instantiate(screwAnimationPrefab, transform.position, transform.rotation);
                 newScrewAnimation.GetComponent<ScrewAnimator>().currentConnector = this;

@@ -16,12 +16,14 @@ public class ScrewAnimator : MonoBehaviour
 
     private void Update()
     {
-        if (currentConnector)
-            transform.parent = currentConnector.transform.parent;
+        //if (currentConnector)
+        //    transform.parent = currentConnector.transform.parent;
     }
 
     private void EndAnimation()
     {
+        print("END");
+
         if(currentConnector)
             currentConnector.NextStep();
         Destroy(gameObject);
