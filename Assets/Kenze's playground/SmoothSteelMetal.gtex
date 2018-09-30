@@ -1,0 +1,100 @@
+﻿{
+	"material":
+	{
+		"name": "SmoothSteelMetal",
+		"shader": "gt_product",
+		"type": "material",
+		"tiling": 1,
+		"texturemaps":
+		{
+			"basecolor": 
+			{
+				"path": "Textures/SmoothSteelMetal_basecolor.png",
+				"maxsize": 2048,
+				"compression": "default",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			},
+			"roughness":
+			{
+				"path": "Textures/SmoothSteelMetal_roughness.png",
+				"maxsize": 2048,
+				"compression": "default",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			},
+			"metallic": 
+			{
+				"path": "Textures/SmoothSteelMetal_metallic.png",
+				"maxsize": 2048,
+				"compression": "default",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			},
+			"albedo": 
+			{
+				"path": "Textures/SmoothSteelMetal_albedo.png",
+				"maxsize": 2048,
+				"compression": "default",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			},
+			"specular":
+			{
+				"path": "Textures/SmoothSteelMetal_specular.png",
+				"maxsize": 2048,
+				"compression": "default",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			},
+			"glossiness":
+			{
+				"path": "Textures/SmoothSteelMetal_glossiness.png",
+				"maxsize": 2048,
+				"compression": "default",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			},
+			"normal":
+			{
+				"path": "Textures/SmoothSteelMetal_normal.png",
+				"maxsize": 2048,
+				"compression": "normal",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			},
+			"ambientocclusion":
+			{
+				"path": "Textures/SmoothSteelMetal_ambientocclusion.png",
+				"maxsize": 2048,
+				"compression": "default",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			},
+			"height":
+			{
+				"path": "Textures/SmoothSteelMetal_height.png",
+				"maxsize": 2048,
+				"compression": "default",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			},
+			"emissive":
+			{
+				"path": "Textures/SmoothSteelMetal_emissive.png",
+				"maxsize": 2048,
+				"compression": "default",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			},
+			"opacity":
+			{
+				"path": "Textures/SmoothSteelMetal_opacity.png",
+				"maxsize": 2048,
+				"compression": "default",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			}
+		}
+	}
+}
