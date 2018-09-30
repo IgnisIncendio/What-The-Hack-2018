@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screwSO: {fileID: 11400000, guid: 8337d92399f0f8e4bb0f7fdcaa7aac5f, type: 2}
   screwDriverSO: {fileID: 11400000, guid: 16bfb7e6ecc9e154abb1ea8aa9dbad13, type: 2}
-  targetScrewA: {fileID: 1723347791}
+  targetScrewA: {fileID: 0}
   dottedLineComponent: {fileID: 1234837368}
   point1: {x: 0, y: 0, z: 0}
   point2: {x: 0, y: 0, z: 0}
@@ -243,6 +243,87 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &792085641
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7007565234351497900, guid: 9ef945f53de44f84ab2aa0db36d135c4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007565234351497900, guid: 9ef945f53de44f84ab2aa0db36d135c4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007565234351497900, guid: 9ef945f53de44f84ab2aa0db36d135c4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007565234351497900, guid: 9ef945f53de44f84ab2aa0db36d135c4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007565234351497900, guid: 9ef945f53de44f84ab2aa0db36d135c4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007565234351497900, guid: 9ef945f53de44f84ab2aa0db36d135c4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007565234351497900, guid: 9ef945f53de44f84ab2aa0db36d135c4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007565234351497900, guid: 9ef945f53de44f84ab2aa0db36d135c4, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007565234351497900, guid: 9ef945f53de44f84ab2aa0db36d135c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007565234351497900, guid: 9ef945f53de44f84ab2aa0db36d135c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007565234351497900, guid: 9ef945f53de44f84ab2aa0db36d135c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3112516221972601964, guid: 9ef945f53de44f84ab2aa0db36d135c4, type: 3}
+      propertyPath: m_Name
+      value: screw-screwdriver
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9ef945f53de44f84ab2aa0db36d135c4, type: 3}
+--- !u!1 &792085642 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3112516221972601964, guid: 9ef945f53de44f84ab2aa0db36d135c4, type: 3}
+  m_PrefabInstance: {fileID: 792085641}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &792085643
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792085642}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c075b0b698212e4eaa2cf12c73e5451, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &812421143
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,51 +641,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineMat: {fileID: 2100000, guid: 5d2eb4fb21779ad45bce4043586de891, type: 2}
   lineWidth: 0.05
---- !u!1 &1723347789
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1723347790}
-  - component: {fileID: 1723347791}
-  m_Layer: 0
-  m_Name: screwanim
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1723347790
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723347789}
-  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: -0.007, y: 0.857, z: -0.042}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
---- !u!114 &1723347791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723347789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc3e916bf0ac63143bcef57ad2e3118f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentConnector: {fileID: 0}
-  screw_screwDriver_prefab: {fileID: 3112516221972601964, guid: 9ef945f53de44f84ab2aa0db36d135c4, type: 3}
 --- !u!1001 &1746073923
 PrefabInstance:
   m_ObjectHideFlags: 0
