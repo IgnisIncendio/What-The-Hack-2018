@@ -10,18 +10,22 @@ public class ScrewAnimator : MonoBehaviour
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
     }
     
     public void StartAnimation()
     {
         animator.Play("screwin");
-        Invoke("EndAnimation", 3);
+        Invoke("EndAnimation", 2f);
+
+        if (currentConnector)
+            transform.parent = currentConnector.transform.parent;
     }
 
     private void EndAnimation()
     {
-        currentConnector.NextStep();
+        if(currentConnector)
+            currentConnector.NextStep();
         Destroy(gameObject);
     }
 }
