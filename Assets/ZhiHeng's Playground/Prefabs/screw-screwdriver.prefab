@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 2855910602176382133}
   - component: {fileID: 2855910602176382130}
   m_Layer: 0
-  m_Name: screw-screwdriver
+  m_Name: inside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -282,6 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentConnector: {fileID: 0}
+  animator: {fileID: 2855910602176382130}
 --- !u!1 &2855910602819776294
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,7 +445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3112516221972601964, guid: 9ef945f53de44f84ab2aa0db36d135c4, type: 3}
       propertyPath: m_Name
-      value: screw-screwdriver
+      value: inside
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ef945f53de44f84ab2aa0db36d135c4, type: 3}

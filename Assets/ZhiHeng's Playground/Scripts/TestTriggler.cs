@@ -16,7 +16,7 @@ public class TestTriggler : MonoBehaviour
     [ContextMenu("Trigger ScrewAnim")]
     private void TriggerScrewAnim()
     {
-        targetScrewA.StartAnimation();
+        //targetScrewA.StartAnimation();
     }
 
     [ContextMenu("Trigger DottedLine")]
