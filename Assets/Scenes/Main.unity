@@ -2664,11 +2664,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 424230983}
@@ -5386,6 +5386,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 28f16bbd218375d4aac31283770cfc84, type: 3}
   m_PrefabInstance: {fileID: 1197267872}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1250100322 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1961684358234934497, guid: a9ddf99991e32884e984513e51072fb3, type: 3}
+  m_PrefabInstance: {fileID: 1961684358323229744}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1250100327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250100322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ec117944ebf3434597e039971466039, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+  spawnPointer: {fileID: 1853729147}
+  spawnedObject: {fileID: 2336653446846255630, guid: 30c7df0e19dd9f24080f54683ed6ef25, type: 3}
+  offset: {x: 0, y: 0.5, z: 0}
 --- !u!1 &1254080726
 GameObject:
   m_ObjectHideFlags: 0
@@ -5727,11 +5748,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1351665397}
@@ -6342,11 +6363,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1563034851}
@@ -7149,7 +7170,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1641544339
 PrefabInstance:
@@ -7258,7 +7279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6550502349342941764, guid: e910bee9ef3420342a2e6bbb628cfff8, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6550502349342941764, guid: e910bee9ef3420342a2e6bbb628cfff8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7507,11 +7528,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1690035437}
@@ -7710,7 +7731,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: -210.26001, y: 330.946, z: -183.664}
 --- !u!1001 &1781546732
 PrefabInstance:
@@ -8646,7 +8667,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1917438615
 Transform:
   m_ObjectHideFlags: 0
@@ -9273,11 +9294,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 2015189002}
@@ -9953,11 +9974,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 2113487507}
@@ -10170,7 +10191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1961684357201786442, guid: a9ddf99991e32884e984513e51072fb3, type: 3}
       propertyPath: m_Name
-      value: Chair
+      value: AGAM Chair
       objectReference: {fileID: 0}
     - target: {fileID: 1961684358996103320, guid: a9ddf99991e32884e984513e51072fb3, type: 3}
       propertyPath: m_Mesh
@@ -10228,6 +10249,18 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4285953654
       objectReference: {fileID: 0}
+    - target: {fileID: 4960982969157054838, guid: a9ddf99991e32884e984513e51072fb3, type: 3}
+      propertyPath: spawnPointer
+      value: 
+      objectReference: {fileID: 1853729147}
+    - target: {fileID: 4960982969157054838, guid: a9ddf99991e32884e984513e51072fb3, type: 3}
+      propertyPath: spawnedObject
+      value: 
+      objectReference: {fileID: 4672755667054065115, guid: 2f0fb95d37c938548aa1ea52c9c41ce9, type: 3}
+    - target: {fileID: 1961684358521047224, guid: a9ddf99991e32884e984513e51072fb3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bc6b6169ad2cb1f4b8f623ffdba4854e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9ddf99991e32884e984513e51072fb3, type: 3}
 --- !u!1001 &3669972680974842666
