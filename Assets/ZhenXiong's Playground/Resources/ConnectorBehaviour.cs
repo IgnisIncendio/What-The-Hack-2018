@@ -6,6 +6,7 @@ public class ConnectorBehaviour : MonoBehaviour
 {
     public SectionManager m_Manager;
     public Parts_ScriptableObject part_ScriptableObject;
+    public Material lineMat;
     public bool isOfficial = false;
 
     public GameObject screwAnimationPrefab;
@@ -27,6 +28,22 @@ public class ConnectorBehaviour : MonoBehaviour
         {
             transform.position = followTransform.position;
             transform.rotation = followTransform.rotation;
+        }
+
+        if (needAnimation && !isOfficial)
+        {
+            if (!GetComponent<DottedLineComponent>())
+            {
+                DottedLineComponent dlc = gameObject.AddComponent<DottedLineComponent>();
+                dlc.lineMat = lineMat;
+                dlc.lineWidth = 0.001f;
+            }
+        }
+
+        if(GetComponent<DottedLineComponent>())
+        {
+            print(gameObject.name + " : " + m_Manager.RequiredConnection[m_Manager.stepVal].name);
+            GetComponent<DottedLineComponent>().SetPoints(transform.position, m_Manager.RequiredConnection[m_Manager.stepVal].transform.position);
         }
     }
 
@@ -55,6 +72,8 @@ public class ConnectorBehaviour : MonoBehaviour
                     transform.gameObject.SetActive(false);
                     other.GetComponent<ConnectorBehaviour>().newPos = gameObject;
                 }
+
+                SoundManager.instance.PlaySFX(SoundManager.SFX.FURNIT_CONN);
             }
         }
         else if(other.tag == "ScrewDriver" && needAnimation && m_Manager && !isOfficial)
@@ -66,6 +85,12 @@ public class ConnectorBehaviour : MonoBehaviour
             screwDriver = other.gameObject;
 
             screwDriver.SetActive(false);
+
+            Collider[] allCollider = GetComponentsInChildren<Collider>();
+            foreach(Collider col in allCollider)
+            {
+                col.isTrigger = true;
+            }
         }
     }
 
@@ -80,5 +105,6 @@ public class ConnectorBehaviour : MonoBehaviour
         screwDriver.gameObject.SetActive(true);
         screwDriver = null;
         m_Manager.changeStep(1);
+        SoundManager.instance.PlaySFX(SoundManager.SFX.FURNIT_CONN);
     }
 }
