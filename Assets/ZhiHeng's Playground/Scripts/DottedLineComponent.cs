@@ -5,8 +5,8 @@ using UnityEngine;
 public class DottedLineComponent : MonoBehaviour
 {
     private LineRenderer m_LineRenderer;
-    [SerializeField] private Material lineMat;
-    [SerializeField] private float lineWidth;
+    public Material lineMat;
+    public float lineWidth;
 
     private Vector3 point1 = Vector3.zero;
     private Vector3 point2 = Vector3.zero;
@@ -34,6 +34,12 @@ public class DottedLineComponent : MonoBehaviour
         this.point2 = point2;
     }
 
+    private void Start()
+    {
+        m_LineRenderer.widthMultiplier = lineWidth;
+        m_LineRenderer.material = lineMat;
+    }
+
     private void OnEnable()
     {
         if (!GetComponent<LineRenderer>())
@@ -42,9 +48,6 @@ public class DottedLineComponent : MonoBehaviour
             m_LineRenderer = GetComponent<LineRenderer>();
 
         m_LineRenderer.positionCount = 2;
-
-        m_LineRenderer.widthMultiplier = lineWidth;
-        m_LineRenderer.material = lineMat;
     }
 
     private void OnDisable()
