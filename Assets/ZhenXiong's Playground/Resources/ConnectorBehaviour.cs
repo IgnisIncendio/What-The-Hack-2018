@@ -22,6 +22,18 @@ public class ConnectorBehaviour : MonoBehaviour
         m_Manager = manage;
     }
 
+    private void Start()
+    {
+        if (transform.parent.GetComponent<SectionManager>())
+        {
+            m_Manager = transform.parent.GetComponent<SectionManager>();
+        }
+        else if (transform.parent.parent.GetComponent<SectionManager>())
+        {
+            m_Manager = transform.parent.parent.GetComponent<SectionManager>();
+        }
+    }
+
     private void Update()
     {
         if (followTransform)
@@ -40,9 +52,8 @@ public class ConnectorBehaviour : MonoBehaviour
             }
         }
 
-        if(GetComponent<DottedLineComponent>())
+        if(GetComponent<DottedLineComponent>()  && m_Manager.RequiredConnection[m_Manager.stepVal].gameObject.activeInHierarchy)
         {
-            print(gameObject.name + " : " + m_Manager.RequiredConnection[m_Manager.stepVal].name);
             GetComponent<DottedLineComponent>().SetPoints(transform.position, m_Manager.RequiredConnection[m_Manager.stepVal].transform.position);
         }
     }
@@ -54,15 +65,22 @@ public class ConnectorBehaviour : MonoBehaviour
         if (other.GetComponent<ConnectorBehaviour>() && other.GetComponent<ConnectorBehaviour>().part_ScriptableObject.m_PartName == part_ScriptableObject.m_PartName)
         {
             if (isOfficial)
-            {   
+            {
                 isOfficial = false;
-                
+
                 other.GetComponent<ConnectorBehaviour>().followTransform = transform;
-                
+
                 if (!needAnimation)
                 {
                     other.GetComponent<Collider>().enabled = false;
                     m_Manager.changeStep(1);
+
+
+                    Collider[] allCollider = other.GetComponentsInChildren<Collider>();
+                    foreach (Collider col in allCollider)
+                    {
+                        col.isTrigger = true;
+                    }
                 }
                 else
                 {
@@ -71,25 +89,37 @@ public class ConnectorBehaviour : MonoBehaviour
                     other.GetComponent<ConnectorBehaviour>().m_Manager = m_Manager;
                     transform.gameObject.SetActive(false);
                     other.GetComponent<ConnectorBehaviour>().newPos = gameObject;
+
+                    Collider[] allCollider = other.GetComponentsInChildren<Collider>();
+                    foreach (Collider col in allCollider)
+                    {
+                        col.isTrigger = true;
+
+                        //if (col.GetComponent<Rigidbody>())
+                        //{
+                        //    col.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                        //}
+                    }
                 }
 
                 SoundManager.instance.PlaySFX(SoundManager.SFX.FURNIT_CONN);
             }
         }
-        else if(other.tag == "ScrewDriver" && needAnimation && m_Manager && !isOfficial)
+        else if (other.tag == "ScrewDriver" && needAnimation && m_Manager && !isOfficial)
         {
-            GameObject newScrewAnimation = Instantiate(screwAnimationPrefab, transform.position,transform.rotation);
-            newScrewAnimation.GetComponent<ScrewAnimator>().currentConnector = this;
-            needAnimation = false;
-            
-            screwDriver = other.gameObject;
-
-            screwDriver.SetActive(false);
-
-            Collider[] allCollider = GetComponentsInChildren<Collider>();
-            foreach(Collider col in allCollider)
+            // Spawning animation
+            if (other.gameObject.GetComponent<VRTK.VRTK_InteractableObject>().IsGrabbed())
             {
-                col.isTrigger = true;
+                GameObject newScrewAnimation = Instantiate(screwAnimationPrefab, transform.position, transform.rotation);
+                newScrewAnimation.GetComponent<ScrewAnimator>().currentConnector = this;
+                needAnimation = false;
+
+                screwDriver = other.gameObject;
+
+                screwDriver.SetActive(false);
+
+
+                GetComponent<Collider>().enabled = false;
             }
         }
     }
