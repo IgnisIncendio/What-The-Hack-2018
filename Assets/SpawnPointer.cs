@@ -4,11 +4,13 @@ using VRTK;
 public class SpawnPointer : VRTK_Pointer
 {
     private GameObject currentObject;
+    private Vector3 offset;
 
-    public void BeginSpawn(GameObject currentObject)
+    public void BeginSpawn(GameObject currentObject, Vector3 offset)
     {
         enabled = true;
         this.currentObject = currentObject;
+        this.offset = offset;
     }
 
     public override void OnSelectionButtonPressed(ControllerInteractionEventArgs e)
@@ -18,7 +20,7 @@ public class SpawnPointer : VRTK_Pointer
             enabled = false;
 
             // Spawn
-            Instantiate(currentObject, pointerRenderer.GetDestinationHit().point, currentObject.transform.rotation);
+            Instantiate(currentObject, pointerRenderer.GetDestinationHit().point + offset, currentObject.transform.rotation);
         }
     }
 }

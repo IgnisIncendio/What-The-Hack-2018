@@ -6,10 +6,11 @@ public class MenuSpawn : MenuInteractable
 {
     [SerializeField] private SpawnPointer spawnPointer;
     [SerializeField] private GameObject spawnedObject;
+    [SerializeField] private Vector3 offset;
 
     public override void Press()
     {
         base.Press();
-        spawnPointer.BeginSpawn(spawnedObject);
+        spawnPointer.BeginSpawn(spawnedObject, offset);
     }
 }
